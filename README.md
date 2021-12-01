@@ -1,5 +1,3 @@
 # Palindrome_number
-
-## Incomplete
- Trying things out
+# Bubble_sorting
  
