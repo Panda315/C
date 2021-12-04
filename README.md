@@ -4,3 +4,5 @@ A palindromic number (also known as a numeral palindrome or a numeric palindrome
 # Bubble_sorting
 Bubble sorting is the sorting algorithm which works by repeatedly swapping the adjacent elements if they are not in the desired order. The provided code does bubble sorting using dynamic memory allocation.
  
+# Information Search
+Simple program made to store the information and display it when required. The stored information can be viewed with the help of the symbol number of the id.
