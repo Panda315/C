@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 typedef struct{
-    char n[10];
-    int r;
-    int s;
-    char m[20];
+    char name[20];
+    int roll;
+    int symbol;
+    char m[20];  //course name 
 }info;
 
 
@@ -12,31 +12,32 @@ info* search(int x,info a[],int n)
 {
     for(int i=0;i<n;i++)
     {
-        if(((a+i)->s)==x)
+        if(((a+i)->symbol)==x)
             return a+i;
     }
 }
 
 int main()
 {
-    printf("\e[1;1H\e[2J");
+    printf("\e[1;1H\e[2J");       //clear screen
     int n;
     printf("Enter the number of students : ");
     scanf("%d",&n);
-    
+
     info a[n];
     
-    for(int i=0;i<n;i++)
+    for(int i=0;i<n;i++)            //storing information
     {
+        getchar();
         printf("\nfor student %d : ",i+1);
         printf("\nName : ");
-        scanf("%s",a[i].n);
+        gets(a[i].name);
         printf("Roll No : ");
-        scanf("%d",&a[i].r);
+        scanf("%d",&a[i].roll);
         printf("Symbol No : ");
-        scanf("%d",&a[i].s);
+        scanf("%d",&a[i].symbol);
         printf("Major Subject : ");
-        scanf("%s",a[i].m);
+        scanf("%s",a[i].m);   
     }
     
     int x;
@@ -48,9 +49,10 @@ int main()
      
     info *p;    
     p=search(x,a,n);
-    printf("\nName : %s",p->n);
-    printf("\nRoll No : %d",p->r);
-    printf("\nSymbol NO : %d",p->s);
-    printf("\nMajor Subject : %s\n",p->m);   
+    printf("\nName : %s",p->name);
+    printf("\nRoll No : %d",p->roll);
+    printf("\nSymbol NO : %d",p->symbol);
+    printf("\nMajor Subject : %s\n",p->m);  
+    printf("\n"); 
         
 }
