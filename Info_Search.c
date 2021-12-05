@@ -13,9 +13,9 @@ void write_to_csv(FILE* file,info a[],int n)        //function to write in csv f
 {
     for(int i=0;i<n;i++)
     {
-        fprintf("%s,%d,%d,%s,%d",a[i].name,a[i].roll,a[i].symbol,a[i].subject,a[i].contact);
+        fprintf(file, "%s,%d,%d,%s,%d\n",a[i].name,a[i].roll,a[i].symbol,a[i].subject,a[i].contact);
     }
-    printf("\nNew Information are Sucessfully stored.");
+    printf("\nNew Information are Sucessfully stored.\n\n");
     
 }
 
@@ -35,15 +35,19 @@ int main()
     int command,x,nos;             //nos = number of students
     start:
     printf("Please input the command of your wish : ");
-    printf("\n1) Store Information \n2)Search Information \n3)Delete Information \n4)Exit");
+    printf("\n1) Store Information \n2) Search Information \n3) Delete Information \n4) Exit\n");
     scanf("%d",&command);
 
     if(command == 1)        //command for storing information
     {
-        printf("Enter the number of students : ");
+        repeat_storing:
+        printf("\e[1;1H\e[2J");  
+        printf("******************** STORING TERMINAL ********************");
+        printf("\n\nEnter the number of students : ");
         scanf("%d",&nos);
 
     info a[nos];
+    int reply_storing;
     
     for(int i=0;i<nos;i++)            //storing information
     {
@@ -54,14 +58,35 @@ int main()
         printf("Roll No : ");
         scanf("%d",&a[i].roll);
         printf("Symbol No : ");
-        scanf("%d",&a[i].symbol);
+        scanf("%d",&a[i].symbol); 
         getchar();
         printf("Major Subject : ");
         gets(a[i].subject); 
         printf("Contact Number : ");
         scanf("%d",&a[i].contact);
     }
-    goto start;
+    printf("\n\nDo you want the information to be stored : \n1)YES \n2)NO \n3)EXIST WITHOUT SAVING INFORMATION \n");
+    scanf("%d",&reply_storing);
+
+    switch(reply_storing)
+    {
+        case 1:
+                    printf("\e[1;1H\e[2J");
+                    FILE * csv_file = fopen("data.csv", "a");
+                    if(!csv_file) {
+                        printf("There was an error reading the file.");
+                        break;
+                    }
+                    write_to_csv(csv_file,a,nos);
+                    fclose(csv_file);
+            goto start;
+
+        case 2:
+            goto repeat_storing;
+        
+        case 3:
+            goto start;
+    }
     }
   
     if(command == 2)        //command for searching iformation
@@ -89,9 +114,5 @@ int main()
     if(command == 4)            //command for exit
     {
         printf("\e[1;1H\e[2J");
-        goto start;
-    }
-    
-    
-        
+    }      
 }
