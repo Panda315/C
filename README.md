@@ -6,3 +6,6 @@ Bubble sorting is the sorting algorithm which works by repeatedly swapping the a
  
 # Information Search
 Simple program made to store the information and display it when required. The stored information can be viewed with the help of the symbol number of the id.
+
+# Name_Order
+It arranges name on the order of the alphabet (increasing order). If the given names are same then the order in which they will appear be decided on the basis of symbol number.
