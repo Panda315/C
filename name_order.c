@@ -9,9 +9,8 @@ typedef struct{
 
 int main()
 {
-
+    printf("\e[1;1H\e[2J");
     student s[5];
-    student *p=s;
     printf("All small letters.\n\n");
     for(int i=0;i<5;i++){
         printf("Name: ");
