@@ -10,9 +10,12 @@ typedef struct{
 int main()
 {
     printf("\e[1;1H\e[2J");
-    student s[5];
-    printf("All small letters.\n\n");
-    for(int i=0;i<5;i++){
+    int nos;
+    printf("Enter the number of students : ");
+    scanf("%d",&nos);
+    student s[nos];
+    printf("\n\nAll small letters.\n\n");
+    for(int i=0;i<nos;i++){
         printf("Name: ");
         scanf("%s",s[i].name);
         printf("Symbol No: ");
@@ -21,14 +24,12 @@ int main()
     }
     printf("\n");
 
-    printf("\n%s %s %s %s %s",s[0].name,s[1].name,s[2].name,s[3].name,s[4].name);
-    for(int m=0;m<4;m++)
+    for(int m=0;m<nos-1;m++)
     {
-        for(int n=0;n<4;n++)
+        for(int n=0;n<nos-1;n++)
         {
             int r=0;
             r=strcmp(s[n].name,s[n+1].name);                  //comparing string
-            printf("\n%d",r);
             if(r==0)                                        //if both the names are same
             {
                 if(s[n].sn<s[n+1].sn)                       //arranging in order of symbol  no if names are same
@@ -52,12 +53,11 @@ int main()
             else                                            //if alphabetically first name is smaller than second
                 continue;
         }
-        printf("\n%s %s %s %s %s\n",s[0].name,s[1].name,s[2].name,s[3].name,s[4].name);
     }
     
     printf("ROLL NO\t SYMBOL NO\t NAME\n");
     
-    for(int x=0;x<5;x++)
+    for(int x=0;x<nos;x++)
     {
         printf("%d\t",x+1);
         printf("   %d\t",s[x].sn);
