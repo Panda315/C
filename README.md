@@ -9,3 +9,6 @@ Simple program made to store the information and display it when required. The s
 
 # Name_Order
 It arranges name on the order of the alphabet (increasing order). If the given names are same then the order in which they will appear be decided on the basis of symbol number.
+
+# Armstrong_Number
+Armstrong number of a n digits number is a number that is equal to the sum of the nth power of its digits. For example 0, 1, 153, 370, 1741725 are the Armstrong numbers.
