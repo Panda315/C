@@ -15,3 +15,7 @@ Armstrong number of a n digits number is a number that is equal to the sum of th
 
 # Perfect_Number
 Perfect Number is a positive integer that is equal to the sum of its proper divisors . For example 6, 28, 496 and so on.
+
+# Strong_Number
+Strong number is a special number whose sum of the factorial of digits is equal to the original number. For Example: 145 is strong number.
+
