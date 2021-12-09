@@ -12,3 +12,6 @@ It arranges name on the order of the alphabet (increasing order). If the given n
 
 # Armstrong_Number
 Armstrong number of a n digits number is a number that is equal to the sum of the nth power of its digits. For example 0, 1, 153, 370, 1741725 are the Armstrong numbers.
+
+# Perfect_Number
+Perfect Number is a positive integer that is equal to the sum of its proper divisors . For example 6, 28, 496 and so on.
