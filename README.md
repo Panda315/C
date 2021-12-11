@@ -19,7 +19,7 @@ Perfect Number is a positive integer that is equal to the sum of its proper divi
 # Strong_Number
 Strong number is a special number whose sum of the factorial of digits is equal to the original number. For Example: 145 is strong number.
 
-# Matrix
+# Matrix_Transpose
 The transpose of a matrix is an operator which flips a matrix over its diagonal; that is, it switches the row and column indices of the matrix A by producing another matrix, often denoted by Aᵀ. 
 
 # Matrix_multiplication
