@@ -22,5 +22,5 @@ Strong number is a special number whose sum of the factorial of digits is equal 
 # Matrix_Transpose
 The transpose of a matrix is an operator which flips a matrix over its diagonal; that is, it switches the row and column indices of the matrix A by producing another matrix, often denoted by Aᵀ. 
 
-# Matrix_multiplication
+# Matrix_Multiplication
 Matrix multiplication is a binary operation that produces a matrix from two matrices. For matrix multiplication, the number of columns in the first matrix must be equal to the number of rows in the second matrix. The resulting matrix, known as the matrix product, has the number of rows of the first and the number of columns of the second matrix. 
