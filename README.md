@@ -26,3 +26,4 @@ The transpose of a matrix is an operator which flips a matrix over its diagonal;
 Matrix multiplication is a binary operation that produces a matrix from two matrices. For matrix multiplication, the number of columns in the first matrix must be equal to the number of rows in the second matrix. The resulting matrix, known as the matrix product, has the number of rows of the first and the number of columns of the second matrix. 
 
 # Matrix_Addition
+Matrix addition is the operation of adding two matrices by adding the corresponding entries together. 
