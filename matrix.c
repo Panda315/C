@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 void multiplication();
+void add();
 void input(int c,int x[][c],int r,char a)
 {                  
     printf("\nEnter elements for matrix %c : ",a);
@@ -19,6 +20,7 @@ void input(int c,int x[][c],int r,char a)
 
 int main()
 {
+    printf("\e[1;1H\e[2J"); 
     int r1,c1,r2,c2;
     printf("Enter the number of rows for Matrix A : ");
     scanf("%d",&r1);
@@ -40,7 +42,7 @@ int main()
     
     else if(c1!=r2)
     {
-        printf("\nGIVEN MATRICES CAN NOT BE MULTIPLIED.");
+        printf("\nGIVEN MATRICES CAN NOT BE USED FOR DESIRED PROCESS.");
     }
         
     else
@@ -49,12 +51,24 @@ int main()
     int b[r2][c2];
     char f='A';
     char s='B';
+    int command=0;
 
-    
+    printf("Give the desired command : ");
+    printf("\n1)Multiplicaton \n2)Addition");
+    printf("\n");
+    scanf("%d",&command);
     input(c1,a,r1,f);
     input(c2,b,r2,s);
     
-    multiplication(c1,c2,a,b,r1,r2);
+    if(command==1)
+    {
+        multiplication(c1,c2,a,b,r1,r2);
+    }
+    else if(command==2)
+    {
+        add(c1,a,b,r1);
+    }
+    
     }
 }
 
@@ -88,4 +102,19 @@ void multiplication(int c1,int c2,int a[][c1],int b[][c2],int r1,int r2)
         }
         printf("\n");
     }
+}
+
+void add(int c,int a[][c],int b[][c],int r)         //addition of two matrix
+{
+    int result[r][c];
+    printf("\n\nMatrix formed from addition of given two matrices is: \n");
+    for(int i=0;i<r;i++)            
+    {
+        for(int j=0;j<c;j++)
+        {
+            result[i][j]=a[i][j]+b[i][j];
+            printf("%d\t",result[i][j]);
+        }
+        printf("\n");
+    } 
 }
